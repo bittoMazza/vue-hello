@@ -13,10 +13,18 @@
 <body>
     <div id="root">
         <div class="container">
-            <div class="col-12 text-center pt-5">
-                <input type="text" v-model="textTitle" placeholder="Inserire Testo per il titolo">
-                <h1 class="text-danger"> {{ textTitle }} </h1>
-            </div>
+            <div class="row">
+                <div class="col-12 text-center pt-5">
+                    <input type="text" v-model="textTitle" placeholder="Inserire Testo per il titolo">
+                    <h1 class="text-danger"> {{ textTitle }} </h1>
+                </div>
+                <div class="col-12 pt-5 text-center">
+                    <input type="text" v-model="newImageLink" placeholder="Inserisci link immagine">
+                    <button class="btn-danger" @click="changeImage"> Cambia immagine </button>
+                    <img :src="imageLink" class="" alt="">
+                </div>
+                
+            </div>         
         </div>
     </div>
 
